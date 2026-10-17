@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 180" role="img" aria-labelledby="title desc">
+  <title id="title">Rhine Lab Archive Terminal</title>
+  <desc id="desc">An original Rhine Lab inspired research archive mark.</desc>
+  <rect width="720" height="180" fill="#111519"/>
+  <path d="M20 20h680v140H20z" fill="none" stroke="#7b8588" stroke-width="2"/>
+  <path d="M20 20h8v140h-8z" fill="#f27a22"/>
+  <path d="M54 48h110M54 60h74" stroke="#738187" stroke-width="2"/>
+  <text x="54" y="127" fill="#f27a22" font-family="Consolas,monospace" font-size="68" font-weight="700" letter-spacing="4">RL</text>
+  <path d="M198 42v96" stroke="#667378" stroke-width="2"/>
+  <text x="228" y="83" fill="#e7e6df" font-family="Consolas,monospace" font-size="25" font-weight="700" letter-spacing="4">RHINE LAB</text>
+  <text x="228" y="119" fill="#9aa6aa" font-family="Consolas,monospace" font-size="14" letter-spacing="3">ARCHIVE TERMINAL / DSH WEB THEME</text>
+  <g fill="#f27a22"><rect x="640" y="44" width="10" height="10"/><rect x="658" y="44" width="10" height="10"/><rect x="676" y="44" width="10" height="10"/></g>
+  <text x="642" y="129" fill="#8c999e" font-family="Consolas,monospace" font-size="11" letter-spacing="2">RL-017</text>
+</svg>

@@ -1,6 +1,6 @@
-# dsh-theme-rhine-lab
+# 简体中文 README
 
-[English](README.md) | 中文
+项目主页已迁移至 [README.md](README.md)。此文件保留，兼容既有的 `README.zh.md` 链接。
 
 > 为 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（dsh）网页版重组《明日方舟》莱茵生命界面：以档案终端为核心视觉，并加入克制的机构 HUD 标识。
 

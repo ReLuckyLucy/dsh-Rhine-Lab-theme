@@ -1,40 +1,40 @@
-# dsh-theme-rhine-lab
+<div align="center">
+  <img alt="Rhine Lab archive terminal mark" height="128" src="img/logo.svg">
+</div>
 
-English | [中文](README.zh.md)
+<h1 align="center">莱茵生命主题｜将 DeepSeek Harness 重组为研究档案终端</h1>
 
-> An [Arknights](https://www.arknights.global/) Rhine Lab reconstruction for the [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) Web GUI: an archive-terminal visual system with restrained institutional HUD branding.
+<p align="center"><a href="README.en.md">English</a> · 简体中文</p>
 
-![Rhine Lab light archive mode](screenshots/light.png)
-![Rhine Lab dark night-operations mode](screenshots/dark.png)
+<p align="center">
+  <img alt="License" src="https://img.shields.io/github/license/ReLuckyLucy/dsh_Rhine_Lab_theme">
+  <img alt="Top language" src="https://img.shields.io/github/languages/top/ReLuckyLucy/dsh_Rhine_Lab_theme">
+  <img alt="Latest release" src="https://img.shields.io/github/v/release/ReLuckyLucy/dsh_Rhine_Lab_theme?include_prereleases">
+  <img alt="Last commit" src="https://img.shields.io/github/last-commit/ReLuckyLucy/dsh_Rhine_Lab_theme">
+</p>
+<p align="center">
+  <img alt="Code size" src="https://img.shields.io/github/languages/code-size/ReLuckyLucy/dsh_Rhine_Lab_theme">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/ReLuckyLucy/dsh_Rhine_Lab_theme">
+  <img alt="Release downloads" src="https://img.shields.io/github/downloads/ReLuckyLucy/dsh_Rhine_Lab_theme/total">
+  <img alt="Stars" src="https://img.shields.io/github/stars/ReLuckyLucy/dsh_Rhine_Lab_theme?style=social">
+</p>
 
-## Visual system
+这是一个面向 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) Web 界面的《明日方舟》莱茵生命主题插件。它把对话工作区呈现为研究档案终端，同时保留 Harness 原有的控件、布局和设置流程。
 
-The reconstruction presents Harness as a research archive rather than a decorative overlay:
+- 以暖纸、浓墨和研究橙构成浅色总部档案模式。
+- 以炭黑和青色实时状态构成深色夜间行动模式。
+- 在 **设置 → 通用** 中用原生开关启用或关闭主题。
+- 尊重减少动态效果偏好，并在窄屏隐藏非必要装饰。
 
-- **Light headquarters archive** uses warm paper, dense ink, squared file edges, and research-orange authorization accents.
-- **Dark night-operations mode** keeps the same record structure on charcoal surfaces, with cyan reserved for live data and red for failures.
-- **Restrained direct branding** is limited to non-interactive archival labels and the Rhine Lab shell mark; it never adds controls or changes Harness workflow.
-- **Accessible behavior** preserves normal interaction, respects `prefers-reduced-motion`, and reduces only nonessential inscriptions and gutters at narrow widths.
+## 🔥 快速开始
 
-No media from any local reference site is redistributed. The package contains only its own source, compiled output, documentation, and the release screenshots above.
-
-## Compatibility and safe degradation
-
-The compatibility target is **DeepSeek Harness 0.1.0-rc.5** on the Web surface (`dsh --profile web`). The stylesheet is deliberately scoped to stable Harness data attributes. If a future or older host omits an anchor, that decoration simply does not apply: the host’s controls, layout tracks, scrolling, code surfaces, and settings remain in charge.
-
-The existing **Settings → General** toggle remains the control point. It still reads and writes the durable `ui-theme-rhine-lab.enabled` preference; no migration or replacement settings namespace is introduced. Light, Dark, and System continue to select the base mode underneath the reconstruction.
-
-## Install
-
-Install a published package or a packed tarball:
+**环境要求：** 已安装 DeepSeek Harness，并使用 Web profile。以下命令从 GitHub 获取当前默认分支版本：
 
 ```sh
-dsh plugin --profile web add dsh-theme-rhine-lab
-pnpm pack
-dsh plugin --profile web add ./dsh-theme-rhine-lab-0.2.1.tgz
+dsh plugin --profile web add github:ReLuckyLucy/dsh_Rhine_Lab_theme
 ```
 
-Install from source after building it:
+安装后重启 `dsh web` 并刷新浏览器，再到 **设置 → 通用** 启用莱茵生命主题。要从源码运行或开发：
 
 ```sh
 git clone https://github.com/ReLuckyLucy/dsh_Rhine_Lab_theme.git
@@ -44,25 +44,65 @@ pnpm build
 dsh plugin --profile web add .
 ```
 
-Restart `dsh web` after changing the installed plugin set, then refresh the browser. Git installs use the committed `lib/` artifacts and do not require lifecycle-script approval; `prepack` rebuilds those artifacts before a tarball is produced.
+Git 安装直接使用仓库内已提交的 `lib/` 产物，不要求目标 profile 放行安装脚本；生成 npm tarball 时，`prepack` 会先重建产物。
 
-## How it works
+## 📜 输入与依赖
 
-- [`cordis.patch.yml`](cordis.patch.yml) contributes the bundle to dsh.
-- [`src/index.ts`](src/index.ts) registers the durable `ui-theme-rhine-lab` setting.
-- [`src/client/index.ts`](src/client/index.ts) projects the enabled setting into token overrides, the scoped archive-terminal stylesheet, the non-interactive HUD, and the General-settings row.
-- [`lib/`](lib) is committed so registry and tarball installs have prebuilt artifacts.
+本主题不读取用户数据集，也不需要下载模型或外部图片。它通过 DeepSeek Harness 提供的 Web 插件接口和主题令牌工作，源码中的 CSS 只作用于 Harness 页面锚点。主题偏好保存在 `ui-theme-rhine-lab.enabled`；浅色、深色或跟随系统的底色仍由 Harness 控制。
 
-## Development and publishing
+兼容性目标为 **DeepSeek Harness 0.1.0-rc.5 Web**。遇到未提供的页面锚点时，对应装饰会自然不生效，宿主控件和布局仍由 Harness 管理。
+
+## 🔛 构建、测试与打包
 
 ```sh
+pnpm install
 pnpm test
 pnpm build
 npm pack --dry-run
 ```
 
-The published tarball intentionally includes `lib`, `src`, `cordis.patch.yml`, both READMEs, `LICENSE`, and `screenshots` when the release captures are present. It excludes tests, local notes, and any reference-site material.
+生成可安装 tarball：
 
-## License
+```sh
+pnpm pack
+dsh plugin --profile web add ./dsh-theme-rhine-lab-0.2.1.tgz
+```
 
-[MIT](LICENSE). This is a fan-made skin; Arknights and Rhine Lab belong to Hypergryph / Yostar.
+制作版本化源码 ZIP（需先提交包含 `VERSION` 的提交）：
+
+```sh
+python scripts/package_source.py
+```
+
+ZIP 会写入 `artifacts/`，只包含该 Git 提交中已跟踪的文件。每次推送的源码 ZIP 也会作为 GitHub Actions Artifact 保留 30 天；推送与 `VERSION` 一致的 `v` 标签后，ZIP 会附加到 GitHub Release。
+
+## 🪦 实际界面
+
+以下截图来自本项目真实运行的主题界面：
+
+<p align="center"><img alt="莱茵生命浅色总部档案模式" src="screenshots/light.png" width="84%"></p>
+<p align="center"><img alt="莱茵生命深色夜间行动模式" src="screenshots/dark.png" width="84%"></p>
+
+## 📁 项目结构
+
+```text
+dsh_Rhine_Lab_theme/
+├── .github/workflows/archive.yml  # 推送归档与版本 Release
+├── img/                           # README 标识
+├── lib/                           # 已提交的运行构建产物
+├── scripts/package_source.py      # 按 Git 提交制作源码 ZIP
+├── screenshots/                  # 真实主题截图
+├── src/                           # 插件源码
+├── tests/                         # 主题与归档规则测试
+├── VERSION                        # 源码归档版本
+├── README.md                      # 中文项目主页
+└── package.json                   # 插件包元数据（当前 0.2.1）
+```
+
+## 📦 版本归档
+
+归档版本号以 [`VERSION`](VERSION) 为准，并与 `package.json` 对齐。推送提交会生成 `dsh_Rhine_Lab_theme-v版本号-提交短号.zip`。推送匹配的 `v版本号` 标签时，GitHub Actions 会创建长期 Release 并附上同一源码 ZIP。归档不包含未提交文件、`node_modules` 或运行环境。
+
+## 📄 许可证
+
+代码采用 [MIT License](LICENSE)。本项目是非官方粉丝主题；《明日方舟》及莱茵生命相关名称和标识归鹰角网络 / Yostar 及其权利方所有。本项目不代表或隶属于权利方。
