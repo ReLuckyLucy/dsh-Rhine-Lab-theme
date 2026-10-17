@@ -7,16 +7,16 @@
 <p align="center"><a href="README.md">简体中文</a> · English</p>
 
 <p align="center">
-  <img alt="License" src="https://img.shields.io/github/license/ReLuckyLucy/dsh_Rhine_Lab_theme">
-  <img alt="Top language" src="https://img.shields.io/github/languages/top/ReLuckyLucy/dsh_Rhine_Lab_theme">
-  <img alt="Latest release" src="https://img.shields.io/github/v/release/ReLuckyLucy/dsh_Rhine_Lab_theme?include_prereleases">
-  <img alt="Last commit" src="https://img.shields.io/github/last-commit/ReLuckyLucy/dsh_Rhine_Lab_theme">
+  <img alt="License" src="https://img.shields.io/github/license/ReLuckyLucy/dsh-Rhine-Lab-theme">
+  <img alt="Top language" src="https://img.shields.io/github/languages/top/ReLuckyLucy/dsh-Rhine-Lab-theme">
+  <img alt="Latest release" src="https://img.shields.io/github/v/release/ReLuckyLucy/dsh-Rhine-Lab-theme?include_prereleases">
+  <img alt="Last commit" src="https://img.shields.io/github/last-commit/ReLuckyLucy/dsh-Rhine-Lab-theme">
 </p>
 <p align="center">
-  <img alt="Code size" src="https://img.shields.io/github/languages/code-size/ReLuckyLucy/dsh_Rhine_Lab_theme">
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/ReLuckyLucy/dsh_Rhine_Lab_theme">
-  <img alt="Release downloads" src="https://img.shields.io/github/downloads/ReLuckyLucy/dsh_Rhine_Lab_theme/total">
-  <img alt="Stars" src="https://img.shields.io/github/stars/ReLuckyLucy/dsh_Rhine_Lab_theme?style=social">
+  <img alt="Code size" src="https://img.shields.io/github/languages/code-size/ReLuckyLucy/dsh-Rhine-Lab-theme">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/ReLuckyLucy/dsh-Rhine-Lab-theme">
+  <img alt="Release downloads" src="https://img.shields.io/github/downloads/ReLuckyLucy/dsh-Rhine-Lab-theme/total">
+  <img alt="Stars" src="https://img.shields.io/github/stars/ReLuckyLucy/dsh-Rhine-Lab-theme?style=social">
 </p>
 
 An Arknights Rhine Lab theme for the [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) Web interface. It presents the conversation workspace as a research archive terminal while preserving Harness controls, layout, and settings flow.
@@ -31,14 +31,14 @@ An Arknights Rhine Lab theme for the [DeepSeek Harness](https://github.com/deeps
 **Requirements:** DeepSeek Harness installed with the Web profile available. This installs the current default branch from GitHub:
 
 ```sh
-dsh plugin --profile web add github:ReLuckyLucy/dsh_Rhine_Lab_theme
+dsh plugin --profile web add github:ReLuckyLucy/dsh-Rhine-Lab-theme
 ```
 
 Restart `dsh web`, refresh the browser, then enable Rhine Lab in **Settings → General**. To build and install from source:
 
 ```sh
-git clone https://github.com/ReLuckyLucy/dsh_Rhine_Lab_theme.git
-cd dsh_Rhine_Lab_theme
+git clone https://github.com/ReLuckyLucy/dsh-Rhine-Lab-theme.git
+cd dsh-Rhine-Lab-theme
 pnpm install
 pnpm build
 dsh plugin --profile web add .
@@ -86,7 +86,7 @@ These screenshots show the theme running in the project’s actual test interfac
 ## 📁 Project structure
 
 ```text
-dsh_Rhine_Lab_theme/
+dsh-Rhine-Lab-theme/
 ├── .github/workflows/archive.yml  # Push archives and version Releases
 ├── img/                           # README mark
 ├── lib/                           # Committed runtime build
@@ -101,7 +101,7 @@ dsh_Rhine_Lab_theme/
 
 ## 📦 Versioned archives
 
-[`VERSION`](VERSION) is the archive version source and must match `package.json`. A push creates `dsh_Rhine_Lab_theme-vVERSION-SHORTSHA.zip`. Pushing the matching `vVERSION` tag creates a long-term GitHub Release with the same ZIP attached. Archives exclude uncommitted files, `node_modules`, and runtime environments.
+[`VERSION`](VERSION) is the archive version source and must match `package.json`. A push creates `dsh-Rhine-Lab-theme-vVERSION-SHORTSHA.zip`. Pushing the matching `vVERSION` tag creates a long-term GitHub Release with the same ZIP attached. Archives exclude uncommitted files, `node_modules`, and runtime environments.
 
 ## 📄 License
 

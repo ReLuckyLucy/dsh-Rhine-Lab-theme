@@ -7,16 +7,16 @@
 <p align="center"><a href="README.en.md">English</a> · 简体中文</p>
 
 <p align="center">
-  <img alt="License" src="https://img.shields.io/github/license/ReLuckyLucy/dsh_Rhine_Lab_theme">
-  <img alt="Top language" src="https://img.shields.io/github/languages/top/ReLuckyLucy/dsh_Rhine_Lab_theme">
-  <img alt="Latest release" src="https://img.shields.io/github/v/release/ReLuckyLucy/dsh_Rhine_Lab_theme?include_prereleases">
-  <img alt="Last commit" src="https://img.shields.io/github/last-commit/ReLuckyLucy/dsh_Rhine_Lab_theme">
+  <img alt="License" src="https://img.shields.io/github/license/ReLuckyLucy/dsh-Rhine-Lab-theme">
+  <img alt="Top language" src="https://img.shields.io/github/languages/top/ReLuckyLucy/dsh-Rhine-Lab-theme">
+  <img alt="Latest release" src="https://img.shields.io/github/v/release/ReLuckyLucy/dsh-Rhine-Lab-theme?include_prereleases">
+  <img alt="Last commit" src="https://img.shields.io/github/last-commit/ReLuckyLucy/dsh-Rhine-Lab-theme">
 </p>
 <p align="center">
-  <img alt="Code size" src="https://img.shields.io/github/languages/code-size/ReLuckyLucy/dsh_Rhine_Lab_theme">
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/ReLuckyLucy/dsh_Rhine_Lab_theme">
-  <img alt="Release downloads" src="https://img.shields.io/github/downloads/ReLuckyLucy/dsh_Rhine_Lab_theme/total">
-  <img alt="Stars" src="https://img.shields.io/github/stars/ReLuckyLucy/dsh_Rhine_Lab_theme?style=social">
+  <img alt="Code size" src="https://img.shields.io/github/languages/code-size/ReLuckyLucy/dsh-Rhine-Lab-theme">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/ReLuckyLucy/dsh-Rhine-Lab-theme">
+  <img alt="Release downloads" src="https://img.shields.io/github/downloads/ReLuckyLucy/dsh-Rhine-Lab-theme/total">
+  <img alt="Stars" src="https://img.shields.io/github/stars/ReLuckyLucy/dsh-Rhine-Lab-theme?style=social">
 </p>
 
 这是一个面向 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) Web 界面的《明日方舟》莱茵生命主题插件。它把对话工作区呈现为研究档案终端，同时保留 Harness 原有的控件、布局和设置流程。
@@ -31,14 +31,14 @@
 **环境要求：** 已安装 DeepSeek Harness，并使用 Web profile。以下命令从 GitHub 获取当前默认分支版本：
 
 ```sh
-dsh plugin --profile web add github:ReLuckyLucy/dsh_Rhine_Lab_theme
+dsh plugin --profile web add github:ReLuckyLucy/dsh-Rhine-Lab-theme
 ```
 
 安装后重启 `dsh web` 并刷新浏览器，再到 **设置 → 通用** 启用莱茵生命主题。要从源码运行或开发：
 
 ```sh
-git clone https://github.com/ReLuckyLucy/dsh_Rhine_Lab_theme.git
-cd dsh_Rhine_Lab_theme
+git clone https://github.com/ReLuckyLucy/dsh-Rhine-Lab-theme.git
+cd dsh-Rhine-Lab-theme
 pnpm install
 pnpm build
 dsh plugin --profile web add .
@@ -86,7 +86,7 @@ ZIP 会写入 `artifacts/`，只包含该 Git 提交中已跟踪的文件。每�
 ## 📁 项目结构
 
 ```text
-dsh_Rhine_Lab_theme/
+dsh-Rhine-Lab-theme/
 ├── .github/workflows/archive.yml  # 推送归档与版本 Release
 ├── img/                           # README 标识
 ├── lib/                           # 已提交的运行构建产物
@@ -101,7 +101,7 @@ dsh_Rhine_Lab_theme/
 
 ## 📦 版本归档
 
-归档版本号以 [`VERSION`](VERSION) 为准，并与 `package.json` 对齐。推送提交会生成 `dsh_Rhine_Lab_theme-v版本号-提交短号.zip`。推送匹配的 `v版本号` 标签时，GitHub Actions 会创建长期 Release 并附上同一源码 ZIP。归档不包含未提交文件、`node_modules` 或运行环境。
+归档版本号以 [`VERSION`](VERSION) 为准，并与 `package.json` 对齐。推送提交会生成 `dsh-Rhine-Lab-theme-v版本号-提交短号.zip`。推送匹配的 `v版本号` 标签时，GitHub Actions 会创建长期 Release 并附上同一源码 ZIP。归档不包含未提交文件、`node_modules` 或运行环境。
 
 ## 📄 许可证
 
